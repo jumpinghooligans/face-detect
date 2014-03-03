@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+	ul
+		li: a(href="/face/add") Add face
+		li: a(href="/face/train") Start training
+		li: a(href="/face/recognize") Recognize a face

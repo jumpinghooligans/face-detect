@@ -1,0 +1,20 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+
+		script(type='text/javascript', src='//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+		script(type='text/javascript', src='//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js')
+		script(type='text/javascript', src='/javascripts/scriptcam/scriptcam.js')
+		script(type='text/javascript', src='/javascripts/scripts.js')
+	body
+		#container
+			#nav
+				a(href="/") Home
+				a(href="/face") Face
+
+			if response
+				#response #{response}
+				
+			block content

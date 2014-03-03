@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+
+	#images
+		#preview
+		#snap
+			a(href='javascript:void()') Snap
+		#camera
+	hr
+	div
+		form(name='add', method='post')
+			p
+				span User ID:
+				input(type='text', name='user_id')
+				input(type='hidden', name='base64')
+			p
+				input(type='submit', value='Post data')

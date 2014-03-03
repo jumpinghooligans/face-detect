@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+
+	if result
+		div: img(src='data:image/png;base64,#{result.base64}')
+
+	#images
+		#preview
+		#snap
+			a(href='javascript:void()') Snap
+		#camera
+	div
+		form(name='add', method='post')
+			p
+				input(type='hidden', name='base64')
+				input(type='submit', value='Recognize')
